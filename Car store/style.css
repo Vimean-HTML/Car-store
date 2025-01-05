@@ -1,0 +1,320 @@
+@import url('https://use.fontawsome.com/releases/v6.4.2/css/all.css');
+/*TikTok code */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background: #f5f5f5;
+    box-shadow: 0 50px 50px #dbdbdb;
+    margin: 100px 100px 100px;
+}
+.h1 {
+    color: white;
+    margin: 500px 10px 500px;
+}
+.container .container1 .container2 {
+    width: 160px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px blue;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+
+}
+
+.container1 .container2:nth-child(1),
+.container1 .container2:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+.container1 .container2:nth-child(3) {
+    left: 50%;
+}
+.container1 .container2:nth-child(4){
+    left: calc(50% + 210px);
+}
+.container1 .container2:nth-child(5) {
+    left: calc(50% + 430px);
+}
+.container1 .container2:nth-child(n + 6) {
+    left: calc(50% + 650px);
+    opacity: 0;
+}
+.container2 .content {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    right: 50%;
+    width: 300px;
+    text-align: left;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+.container1 .container2:nth-child(2) .content {
+    display: block;
+}
+
+.content .name {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+    color: pink;
+    right: 20px;
+}
+.content button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+    color: black;
+    background-color: pink;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.button {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+.button button {
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+.button button:hover {
+    background: white;
+    color: #fff;
+}
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins";
+    overflow-x: hidden;
+}
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #3a0f0f;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    align-items: center;
+    box-shadow: 0 16px -9px rgba(191, 191, 191);
+}
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: #0dd3f6;
+}
+.hamburger {
+    display: none;
+}
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+}
+.nav-bar ul li a {
+    display: block;
+    text-decoration: none;
+    color: #11d8f3;
+    font-size: 20px;
+    padding: 10px 25px;
+    margin: 0 5px;
+    transition: 0.2s;
+}
+.nav-bar ul li a::after{
+    display: block;
+    content: "";
+    border-bottom: 2px solid #A5D7E8;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+.nav-bar ul li a:hover::after {
+    transform: scaleX(1);
+}
+.nav-bar ul li a.active {
+    color: #19376D;
+}
+@media only screen and (max-width:900px) {
+    .humburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #0B2447;
+        margin: 6px 0;
+    }
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: white;
+        box-shadow: 0 16px 8px -9px rgba(191, 191, 191);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .nav-bar .active {
+        height: 450px;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar .active ul{
+        opacity: 1;
+    }
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+}
+.box1 {
+    background-image: url(https://i.pinimg.com/736x/b8/9f/d9/b89fd94d94feb7185af4b64db9d35695.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #0dd3f6;
+    border: solid #11d8f3;
+    box-shadow: 5px 5px 5px #0dd3f6;
+}
+.box2 {
+    background-image: url(https://i.pinimg.com/736x/1a/5f/4e/1a5f4ec8e570858ad101da7a22d00038.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    background-color: #0dd3f6;
+    border: solid #11d8f3;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #0dd3f6;
+}
+.box3 {
+    background-image: url(https://i.pinimg.com/736x/b4/b7/5c/b4b75c9af4d59a3a011b20bd40e4209c.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    background-color: #0dd3f6;
+    border: solid #11d8f3;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #0dd3f6;
+}
+.box4 {
+    background-image: url(https://i.pinimg.com/736x/cb/2c/34/cb2c3460d19d90271460c9db9fa8ce0f.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    background-color: #0dd3f6;
+    border: solid #11d8f3;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #0dd3f6;
+}
+.right {
+    display: grid;
+    grid-template-columns: repeat(2,150px);
+    grid-gap: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.left {
+    margin-right: 20px;
+}
+
+.left p{
+    color: #11d8f3;
+    font-size: large;
+    margin: 10px 0;
+}
+.c1 {
+    background-image: url(https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    background-color: #0dd3f6;
+    border: solid #11d8f3;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #0dd3f6;
+}
+.c2 {
+    background-image: url(https://medialamborghini-meride-tv.akamaized.net/meride/lamborghini/video/images/folder1/1252/vlcsnap-2023-03-17-16h18m30s840.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    background-color: #0dd3f6;
+    border: solid #11d8f3;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #0dd3f6;
+}
+.c3 {
+    background-image: url(https://www.insidehook.com/wp-content/uploads/2024/08/lamborghini-revuelto-insidehook.jpg?fit=1200%2C800);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    background-color: #0dd3f6;
+    border: solid #11d8f3;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #0dd3f6;
+}
+.c4 {
+    background-image: url(https://dorsiafinance.co.uk/wp-content/uploads/10-Facts-About-Lamborghini.webp);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    background-color: #0dd3f6;
+    border: solid #11d8f3;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #0dd3f6;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
