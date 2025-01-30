@@ -150,7 +150,7 @@ header {
 .logo {
     font-size: 28px;
     font-weight: 600;
-    color: #0dd3f6;
+    color: white;
 }
 .hamburger {
     display: none;
@@ -162,7 +162,7 @@ header {
 .nav-bar ul li a {
     display: block;
     text-decoration: none;
-    color: #11d8f3;
+    color: white;
     font-size: 20px;
     padding: 10px 25px;
     margin: 0 5px;
@@ -365,16 +365,16 @@ header {
 }
 h1 {
     font-family: "Jersey 15", serif;
-    color: #11d8f3;
+    color: white;
 }
 p {
     font-family: "Jersey 15", serif;
-    color: #11d8f3;
+    color: white;
     font-size: large;
 }
 span {
     font-family: "Jersey 15", serif;
-    color: aquamarine;
+    color: whitesmoke;
     font-size: xx-large;
 }
 button {
@@ -391,12 +391,12 @@ button {
 }
 .cat span{
     color: #fff;
-    font-weight: 800;
+    font-weight: 600;
 }
 .cat h3{
-    font-size: 88px;
-    font-weight: 400;
-    color: aqua;
+    font-size: 50px;
+    font-weight: 300;
+    color: white;
     -webkit-text-stroke: 1px rgb(20, 64, 239);
     -webkit-background-clip: text;
     background-position: 0 0;
@@ -464,13 +464,11 @@ video:hover{
     margin: 10px 600px 10px;
 }
 .black{
-    background-attachment: fixed;
-    height: 100vh;
-}
-.black{
-    height: 100vh;
-    background-attachment: fixed;
-    background-image: url(https://i.pinimg.com/736x/23/67/b7/2367b70d7bc197c23b286edba6a064e8.jpg);
+    min-height: 100vh;
+    background-image: url(https://i.pinimg.com/736x/e2/b4/de/e2b4de735eea778ae5fa4dc04da7c38d.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .footer{
     background-color: #0B2447;
@@ -582,4 +580,85 @@ button{
 }
 .price{
     color: black;
+}
+.pink{
+    min-height: 100vh;
+    background-image: url(https://i.pinimg.com/736x/1c/ba/38/1cba385973e8c92e544865751b5c5bb3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-group{
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.card-d{
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 8px 8px 8px #03b1f1;
+}
+.card-d img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.card-d .layer{
+    background: linear-gradient(to top, rgba(0, 0, 0, 1,), rgba(0, 0, 0, 0,));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 0;
+    transition: 0.3s;
+}
+.card-d .info-d{
+    position: absolute;
+    bottom: -50%;
+    padding: 15px;
+    opacity: 0;
+    transition: 0.5s bottom, 1.75s opacity;
+}
+.info-d p{
+    font-size: 14px;
+    margin: 3px;
+}
+.info-d button{
+    background: #490CCC;
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+.card-d:hover,
+.card-d:hover img,
+.card-d:hover layer{
+    transform: scale(1.1);
+}
+.card-d:hover > .layer{
+    opacity: 1;
+}
+.card-d:hover > .info-d{
+    bottom: 0;
+    opacity: 1;
+}
+.card-group:hover > .card-d:not(:hover){
+    filter: blur(5px);
+}
+.bts{
+    min-height: 100vh;
+    background-image: url(https://i.pinimg.com/736x/03/4e/ff/034eff7335f134eced337dfab36df2c3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
