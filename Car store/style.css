@@ -151,9 +151,10 @@ header {
     font-size: 28px;
     font-weight: 600;
     color: white;
+    display: inline-block;
 }
 .hamburger {
-    display: none;
+    display: inline-block;
 }
 .nav-bar ul {
     display: flex;
@@ -327,6 +328,7 @@ header {
     align-items: center;
     justify-content: center;
     margin: 10px 5px 10px;
+    min-height: 10vh;
 }
 
 .box {
@@ -459,9 +461,13 @@ video:hover{
     0 0 200px #0397f4;
 }
 .dog{
-    font-size: 50px;
+    font-size: 100px;
     font-weight: 400;
-    margin: 10px 600px 10px;
+    margin: 30px 450px 30px;
+}
+.dog div{
+    margin-right: 20px;
+    color: #0397f4;
 }
 .black{
     min-height: 100vh;
@@ -474,6 +480,7 @@ video:hover{
     background-color: #0B2447;
     color: white;
     padding: 40px 0;
+    
 }
 .footer .heading h2{
     text-align: center;
@@ -494,7 +501,6 @@ video:hover{
     margin: 10px;
 }
 .footer h4{
-    color: #f1c40f;
     margin-bottom: 15px;
 }
 .footer p{
@@ -516,7 +522,7 @@ footer{
     text-align: center;
     margin-top: 40px;
     padding: 10px;
-    font-size: 14px;
+    font-size: 20px;
     color: #bbb;
 }
 footer hr{
@@ -543,7 +549,7 @@ button{
     font-size: 14px;
     font-weight: 500;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-left: 60px;
     align-items: center;
 }
@@ -594,6 +600,7 @@ button{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    min-height: 50vh;
 }
 .card-d{
     width: 300px;
@@ -661,4 +668,19 @@ button{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+.g{
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+h5{
+    color: yellow;
+}
+p{
+    align-items: center;
+    justify-content: center;
 }
